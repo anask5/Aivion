@@ -46,3 +46,59 @@
 
 ```text
 User Input → JavaScript → Flask Backend → Groq AI → Response → UI
+
+🚀 Installation
+git clone https://github.com/sejal0908/aivion.git
+cd aivion
+pip install -r requirements.txt
+python app.py
+🌐 Deployment
+Frontend → Vercel
+Backend → Render
+AI → Groq API
+📁 Project Structure
+Aivion/
+│
+├── static/
+│   ├── css/
+│   ├── js/
+│   ├── images/
+│   └── lofi.mp3
+│
+├── templates/
+│   ├── index.html
+│   ├── chatbot.html
+│   ├── summarize.html
+│   └── timer.html
+│
+├── app.py
+├── requirements.txt
+└── README.md
+🧩 Challenges Faced
+⚠️ Gemini API rate limits
+🐢 Local model inefficiency
+🔄 Switching AI providers
+🎨 UI consistency
+💡 Solutions Implemented
+🔁 Migrated to Groq API
+⚡ Optimized performance
+🎯 Improved prompt design
+✨ Built modern responsive UI
+🔮 Future Enhancements
+📄 PDF upload & analysis
+🎤 Voice input
+🧠 Chat memory
+📊 Study analytics dashboard
+👨‍💻 Authors
+👑 Anas
+👩‍💻 Sejal – https://github.com/sejal0908
+👨‍💻 Charlie – https://github.com/SKCharlie-17
+👨‍💻 Aryan – https://github.com/aryan060606
+👨‍💻 Anask – https://github.com/anask5
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+
+📜 License
+
+This project is licensed under the MIT License.
