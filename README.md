@@ -55,7 +55,7 @@ git clone [https://github.com/sejal0908/aivion.git](https://github.com/sejal0908
 cd aivion
 pip install -r requirements.txt
 python app.py
-```
+
 
 🌐 Deployment
 Frontend: Vercel
