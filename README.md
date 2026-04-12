@@ -44,36 +44,44 @@
 
 ## 🧠 How It Works
 
-```text
-User Input → JavaScript → Flask Backend → Groq AI → Response → UI```
+🧠 How It Works
+
+User Input → JavaScript → Flask Backend → Groq AI → Response → UI
 
 🚀 Installation
+
 git clone https://github.com/sejal0908/aivion.git
+
 cd aivion
 pip install -r requirements.txt
 python app.py
+
 🌐 Deployment
+
 Frontend → Vercel
 Backend → Render
 AI → Groq API
+
 📁 Project Structure
+
 Aivion/
 │
 ├── static/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── lofi.mp3
+│ ├── css/
+│ ├── js/
+│ ├── images/
+│ └── lofi.mp3
 │
 ├── templates/
-│   ├── index.html
-│   ├── chatbot.html
-│   ├── summarize.html
-│   └── timer.html
+│ ├── index.html
+│ ├── chatbot.html
+│ ├── summarize.html
+│ └── timer.html
 │
 ├── app.py
 ├── requirements.txt
 └── README.md
+
 🧩 Challenges Faced
 ⚠️ Gemini API rate limits
 🐢 Local model inefficiency
