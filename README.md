@@ -45,7 +45,7 @@
 ## 🧠 How It Works
 
 ```text
-User Input → JavaScript → Flask Backend → Groq AI → Response → UI
+User Input → JavaScript → Flask Backend → Groq AI → Response → UI```
 
 🚀 Installation
 git clone https://github.com/sejal0908/aivion.git
