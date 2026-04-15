@@ -260,6 +260,9 @@ input::placeholder {
         flex-direction: column;
         gap: var(--space-sm);
     }
+    .navbar__logo {
+        display: none;
+    }
     .hamburger {
         display: block;
     }
