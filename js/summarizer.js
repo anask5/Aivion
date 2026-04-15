@@ -14,7 +14,7 @@ document.getElementById("sendButton").addEventListener("click", async function(e
     output.value = "Typing... ⏳";
 
     try {
-        const response = await fetch("https://aivion-backend.onrender.com/api/summary", {
+        const response = await fetch("https://aivion.onrender.com/api/summary", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

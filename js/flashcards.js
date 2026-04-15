@@ -5,7 +5,7 @@ document.getElementById("generateBtn").onclick = async() => {
     container.innerHTML = "Generating... ⏳";
 
     try {
-        const res = await fetch("https://aivion-backend.onrender.com/api/flashcards", {
+        const res = await fetch("https://aivion.onrender.com/api/flashcards", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
