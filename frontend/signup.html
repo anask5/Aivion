@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="icon" href="/public/logo.jpeg" class="logo">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="/static/signup.css">
+    <link rel="stylesheet" href="/css/signup.css">
 </head>
 
 <body>
@@ -15,14 +17,14 @@
         <nav class="nav">
 
             <a href="index.html" class="navbar__logo">
-                🎓 Aivion
+                AiVion
             </a>
             <div class="hamburger" id="hamburger">
                 ☰
             </div>
 
             <ul class="navbar_menu" id="navMenu">
-                <li><a href="mindmap.html">Mind Map</a></li>
+                <li><a href="flashcards.html">Flashcards</a></li>
                 <li><a href="summarize.html">Summarize</a></li>
                 <li><a href="chat_bot.html">Chat bot</a></li>
                 <li><a href="contact_us.html">Contact Us</a></li>
@@ -83,16 +85,35 @@
                 </div>
             </div>
         </section>
-    </main>
-    <footer class="footer">
+        <div id="desktopPage">
 
-        <div class="footer_content">
-            <p>© 2026 Student AI Assistant</p>
-            <p>Built for students, powered by AI</p>
         </div>
-    </footer>
 
-    <script src="{{ url_for('static', filename='signup.js') }}"></script>
+        <div id="mobileMessage">
+            <div class="mobile-box">
+                <h2>Desktop Only</h2>
+                <p>This page is only available on desktop.<br> Please open on a larger screen to sign in.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        if (window.innerWidth <= 1024) {
+            document.getElementById("desktopPage").style.display = "none";
+            document.getElementById("mobileMessage").style.display = "flex";
+        }
+    </script>
+    <div id="footer"></div>
+    <script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
+
+    <script src="/js/signup.js"></script>
 
 </body>
 

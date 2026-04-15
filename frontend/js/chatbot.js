@@ -11,7 +11,7 @@ document.getElementById("sendButton").addEventListener("click", async function()
     output.value = "Typing... ⏳";
     userInput.value = "            ";
     try {
-        const response = await fetch("/chat", {
+        const response = await fetch("https://aivion-backend.onrender.com/api/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -33,3 +33,19 @@ document.getElementById("sendButton").addEventListener("click", async function()
         output.value = "Something went wrong 🚨";
     }
 });
+
+
+//collapsed sidebar
+const btn = document.getElementById("toggle");
+const sidebar = document.getElementById("sidebar1");
+const close = document.getElementById("closeSidebar");
+
+btn.onclick = () => {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+};
+
+close.onclick = () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+}

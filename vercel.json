@@ -1,0 +1,12 @@
+{
+    "routes": [
+        { "src": "/", "dest": "/index.html" },
+
+        { "src": "/chatbot", "dest": "/chatbot.html" },
+        { "src": "/summarize", "dest": "/summarize.html" },
+        { "src": "/flashcards", "dest": "/flashcards.html" },
+        { "src": "/study-timer", "dest": "/study-timer.html" },
+
+        { "src": "/(.*)", "dest": "/index.html" }
+    ]
+}

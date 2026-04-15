@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 
 
@@ -14,7 +13,7 @@ body {
     min-height: 100vh;
     color: #E0E7FF;
     overflow-x: hidden;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/bg-study.jpg') no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/lofi.jpg') no-repeat center/cover;
 }
 
 
@@ -64,8 +63,8 @@ body {
 
 .title {
     font-size: 36px;
-    color: #00E5FF;
-    text-shadow: 0 0 20px #00E5FF;
+    color: #ffffff;
+    text-shadow: 0 0 10px #b3b3b3;
 }
 
 .subtitle {
@@ -234,4 +233,121 @@ input[type="range"] {
         width: 160px;
         height: 160px;
     }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.85);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+}
+
+#toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    font-size: larger;
+    background: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1002;
+}
+
+#closeSidebar {
+    opacity: 1;
+    pointer-events: all;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+ul {
+    list-style: none;
+    li {
+        margin: 15px 0;
+    }
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#closeSidebar {
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    left: 200px;
+    font-size: 25px;
+}
+
+#head {
+    width: 100%;
+    text-align: center;
+    color: white;
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+}
+
+#logo {
+    width: 35px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    text-align: start;
+}
+
+.nav-btn:hover {
+    background: #ffffff;
+    a {
+        text-decoration: none;
+        color: rgb(0, 0, 0)
+    }
+    transform: scale(1.15);
 }

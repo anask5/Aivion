@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aivion</title>
-    <link rel="icon" href="/static/logo.jpg" class="logo">
-    <link rel="stylesheet" href="/static/index.css">
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="icon" href="/public/logo.jpeg" class="logo">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
@@ -15,18 +16,19 @@
         <nav class="nav">
 
             <a href="index.html" class="navbar__logo">
-                🎓 Aivion
+                 AiVion
             </a>
             <div class="hamburger" id="hamburger">
                 ☰
             </div>
 
             <ul class="navbar_menu" id="navMenu">
-                <li><a href="mindmap.html">Mind Map</a></li>
-                <li><a href="summarize">Summarize</a></li>
-                <li><a href="chat-bot">Chat bot</a></li>
-                <li><a href="contact-us">Contact Us</a></li>
-                <li><a href="about-us">About</a></li>
+                <li><a href="flashcards.html">Flashcards</a></li>
+                <li><a href="summarize.html">Summarize</a></li>
+                <li><a href="chatbot.html">Chat bot</a></li>
+                <li><a href="focus-mode.html">Lofi</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact </a></li>
 
             </ul>
         </nav>
@@ -60,7 +62,7 @@
                     <p class="password_space">Password</p>
                     <input type="password" placeholder="Enter your password" aria-label="Password input for updates" class="password">
                     <button class="login_button" aria-label="Login to your account">Login</button>
-                    <a href="signup" class="signup_link" aria-label="Sign up link">Don't have an account? Sign up</a>
+                    <a href="signup.html" class="signup_link" aria-label="Sign up link">Don't have an account? Sign up</a>
                 </div>
             </div>
 
@@ -73,19 +75,19 @@
             <div class="features_grid">
 
                 <div class="feature-card">
-                    <h3>💬 AI Chat Assistant</h3>
+                    <h3> AI Chat Assistant</h3>
                     <!-- Added emoji for  attractive look -->
                     <p>Get instant answers to your academic questions.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h3>🧠 Mind Map Generator</h3>
+                    <h3> Quiz Generator</h3>
                     <!-- Added emoji for  attractive look -->
-                    <p>Visualize complex topics into structured diagrams.</p>
+                    <p> Best for generating various question types in one click.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h3>📝 Notes Summarizer</h3>
+                    <h3> Notes Summarizer</h3>
                     <!-- Added emoji for  attractive look -->
                     <p>Convert long notes into short and clear key points.</p>
                 </div>
@@ -94,14 +96,16 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <div id="footer"></div>
+    <script src="/js/index.js"></script>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
 
-        <div class="footer_content">
-            <p>© 2026 Student AI Assistant</p>
-            <p>Built for students, by Fs0ceity</p>
-        </div>
-    </footer>
-    <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 
 </html>

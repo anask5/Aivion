@@ -14,7 +14,7 @@ document.getElementById("sendButton").addEventListener("click", async function(e
     output.value = "Typing... ⏳";
 
     try {
-        const response = await fetch("/summarize", {
+        const response = await fetch("https://aivion-backend.onrender.com/api/summary", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -52,4 +52,19 @@ function copyText() {
     navigator.clipboard.writeText(text.value)
         .then(() => alert("Copied! ✅"))
         .catch(() => alert("Copy failed ❌"));
+}
+
+//collapsed sidebar
+const btn = document.getElementById("toggle");
+const sidebar = document.getElementById("sidebar1");
+const close = document.getElementById("closeSidebar");
+
+btn.onclick = () => {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+};
+
+close.onclick = () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
 }
