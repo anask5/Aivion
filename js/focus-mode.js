@@ -69,7 +69,6 @@ document.getElementById("volume").oninput = (e) => {
 update();
 
 
-
 //collapsed sidebar
 const btn = document.getElementById("toggle");
 const sidebar = document.getElementById("sidebar1");
