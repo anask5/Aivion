@@ -16,42 +16,10 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/lofi.jpg') no-repeat center/cover;
 }
 
-
-/* ================= NAVBAR ================= */
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    position: relative;
-    z-index: 10;
-    background: transparent;
-}
-
-.nav a {
-    color: #E0E7FF;
-    margin-left: 20px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.nav a:hover {
-    color: #00E5FF;
-    text-shadow: 0 0 8px #00E5FF;
-}
-
-.logo {
-    color: #00E5FF;
-    font-weight: bold;
-    font-size: 20px;
-    text-shadow: 0 0 10px #00E5FF;
-}
-
-
 /* ================= MAIN ================= */
 
 .main {
-    min-height: calc(100vh - 120px);
+    min-height: calc(70vh - 120px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +39,7 @@ body {
     margin: 10px 0 30px;
     color: #CBD5F5;
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    text-align: center;
 }
 
 
@@ -99,11 +68,13 @@ body {
 }
 
 @keyframes pulseGlow {
+
     0%,
     100% {
         transform: translate(-50%, -50%) scale(1);
         opacity: 0.6;
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.2);
         opacity: 1;
@@ -122,6 +93,7 @@ body {
 
 svg {
     transform: rotate(-90deg);
+    margin: -25px;
 }
 
 .bg {
@@ -191,10 +163,12 @@ svg {
 }
 
 @keyframes lofiPulse {
+
     0%,
     100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.15);
     }
@@ -229,11 +203,13 @@ input[type="range"] {
     .title {
         font-size: 26px;
     }
+
     .circle {
         width: 160px;
         height: 160px;
     }
 }
+
 
 .sidebar {
     position: fixed;
@@ -247,7 +223,14 @@ input[type="range"] {
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 1001;
+
+    a {
+        text-decoration: none;
+        color: white
+    }
 }
+
+
 
 #toggle {
     position: fixed;
@@ -285,13 +268,9 @@ input[type="range"] {
     pointer-events: all;
 }
 
-a {
-    text-decoration: none;
-    color: white
-}
-
 ul {
     list-style: none;
+
     li {
         margin: 15px 0;
     }
@@ -304,31 +283,10 @@ button {
 #closeSidebar {
     border: none;
     color: white;
+    font-size: 25px;
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     left: 200px;
-    font-size: 25px;
-}
-
-#head {
-    width: 100%;
-    text-align: center;
-    color: white;
-    h1 {
-        font-size: 40px;
-        font-weight: bold;
-    }
-    h3 {
-        font-size: 20px;
-        font-weight: normal;
-    }
-}
-
-#logo {
-    width: 35px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
 }
 
 .nav-btn {
@@ -345,9 +303,74 @@ button {
 
 .nav-btn:hover {
     background: #ffffff;
+
     a {
         text-decoration: none;
         color: rgb(0, 0, 0)
     }
+
     transform: scale(1.15);
+}
+
+#logo {
+    width: 40px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.head a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.head {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: var(--space-md);
+
+
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+
+
+
+}
+
+.head h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+
+/* header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    padding-bottom: 40px;
+
+} */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.head img {
+    width: 50px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
 }
