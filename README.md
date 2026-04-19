@@ -5,6 +5,12 @@
 
 ---
 
+
+## Demo
+
+ <img src="https://i.ibb.co/9k6gN8WH/aivion-demo.gif" alt="Sample Image" width="600">
+
+ 
 ## ✨ Features
 
 - 💬 **AI Chatbot** – Ask questions and get instant answers  
@@ -64,25 +70,6 @@ Backend: Render
 
 AI: Groq API
 
-📁 Project Structure
-plaintext
-Aivion/
-│
-├── static/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── lofi.mp3
-│
-├── templates/
-│   ├── index.html
-│   ├── chatbot.html
-│   ├── summarize.html
-│   └── timer.html
-│
-├── app.py
-├── requirements.txt
-└── README.md
 
 🧩 Challenges Faced
 
