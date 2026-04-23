@@ -57,7 +57,7 @@
 ## 🚀 Installation
 
 ```bash
-git clone [https://github.com/sejal0908/aivion.git](https://github.com/sejal0908/aivion.git)
+git clone https://github.com/anask5/aivion.git
 cd aivion
 pip install -r requirements.txt
 python app.py
