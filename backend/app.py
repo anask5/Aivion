@@ -9,7 +9,7 @@ CORS(app)
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
-# ---------------- SUMMARY ----------------
+
 @app.route("/api/summary", methods=["POST"])
 def summarize():
     data = request.get_json()
@@ -31,7 +31,7 @@ def summarize():
         return jsonify({"error": str(e)})
 
 
-# ---------------- CHAT ----------------
+
 @app.route("/api/chat", methods=["POST"])
 def chat():
     data = request.get_json()
@@ -53,7 +53,7 @@ def chat():
         return jsonify({"error": str(e)})
 
 
-# ---------------- QUIZ ----------------
+
 @app.route("/api/quiz", methods=["POST"])
 def quiz():
     data = request.get_json()
@@ -89,7 +89,6 @@ Text:
         return jsonify({"error": str(e)})
 
 
-# ---------------- FLASHCARDS ----------------
 @app.route("/api/flashcards", methods=["POST"])
 def flashcards():
     data = request.get_json()
